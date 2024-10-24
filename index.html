@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: aliceblue;">
+    <div class="gallery-container">
+        <h1>Image Gallery</h1>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button onclick="filterImages('all')"><i class="fa-regular fa-image"></i>  Photos</button>
+            <button onclick="filterImages('nature')"><i class="fa-solid fa-mountain-sun"></i> Nature</button>
+            <button onclick="filterImages('animals')"><i class="fa-regular fa-cow"></i>  Animals</button>
+            <button onclick="filterImages('architecture')"><i class="fa-regular fa-building"></i> Architecture</button>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="gallery" id="gallery">
+            <div class="image nature">
+                <img src="img/nature1.avif" alt="Nature Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image nature">
+                <img src="img/nature2.avif" alt="Nature Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image nature">
+                <img src="img/nature3.avif" alt="Nature Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image animals">
+                <img src="img/tiger.avif" alt="Animal Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image animals">
+                <img src="img/tiger2.avif" alt="Animal Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image animals">
+                <img src="img/tiger3.avif" alt="Animal Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image architecture">
+                <img src="img/bilding4.avif" alt="Architecture Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image architecture">
+                <img src="img/building2.jpg" alt="Architecture Image" onclick="openLightbox(this)">
+            </div>
+            <div class="image architecture">
+                <img src="img/building3.avif" alt="Architecture Image" onclick="openLightbox(this)">
+            </div>
+            <!-- Add more images here -->
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer" style=" background-color: #333; color: white; text-align: center; padding: 10px 0;">
+        <p>© Avinash Kumar, <span id="year"></span></p>
+    </footer>
+    
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+    <!-- footer
+     <footer>
+        <div class="footer">
+            <p style="text-align: center; background-color: rgb(108, 183, 248); color: black; ">&copyright | Avinash kumar | Web Developer</p>
+
+        </div>
+     </footer> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
